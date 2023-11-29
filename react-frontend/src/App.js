@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const App = () => {
   const [data, setData] = useState([]);
-  const history = useHistory();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -24,7 +24,7 @@ const App = () => {
   }, []);
 
   const navigateToSecondPage = () => {
-    history.push('/second');
+    navigate.push('/second');
   };
 
   return (
