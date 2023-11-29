@@ -24,7 +24,7 @@ const App = () => {
   }, []);
 
   const navigateToSecondPage = () => {
-    navigate.push('/second');
+    navigate('/second');
   };
 
   return (
