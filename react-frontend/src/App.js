@@ -29,7 +29,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1>Data Visualization Dashboard</h1>
+      <h1>Data Visualization Dashboard2</h1>
       <ul>
         {data.map(item => (
           <li key={item.id}>
