@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - '*'
+      - main
 
 jobs:
   deploy:
@@ -24,22 +24,16 @@ jobs:
     - name: Build
       run: npm run build
 
-    - name: Create unique commit message
-      id: commit-message
-      run: echo "Prepare for gh-pages deployment $((GITHUB_RUN_NUMBER))" >> commit-message.txt
-
     - name: Deploy to gh-pages
       run: |
         git config --global user.email "actions@github.com"
         git config --global user.name "GitHub Actions"
-        npm run build
-        git checkout -b temp-branch
-        git rm -rf .
+        git checkout gh-pages
+        git rm -r .
         git checkout main -- react-frontend/build/
         mv react-frontend/build/* .
         git rm -rf react-frontend
         git add .
-        git commit -F commit-message.txt
-        git push origin temp-branch:gh-pages -f
+        git commit -m "Deploy to GitHub Pages"
+        git push origin gh-pages -f
         git checkout main
-        git branch -D temp-branch
