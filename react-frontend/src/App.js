@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
-import { useNavigate } from 'react-router-dom';
 
 const App = () => {
   const [data, setData] = useState([]);
-  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -23,10 +21,6 @@ const App = () => {
     fetchData();
   }, []);
 
-  const navigateToSecondPage = () => {
-    navigate('/second');
-  };
-
   return (
     <div className="App">
       <h1>Data Visualization Dashboard2</h1>
@@ -37,7 +31,8 @@ const App = () => {
           </li>
         ))}
       </ul>
-      <button onClick={navigateToSecondPage}>Go to Second Page</button>
+      {/* Add your text box here */}
+      <input type="text" placeholder="Type something..." />
     </div>
   );
 };
