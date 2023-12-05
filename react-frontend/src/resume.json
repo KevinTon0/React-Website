@@ -1,0 +1,25 @@
+{
+    "name": "Kevin Ton",
+    "title": "Portfolio",
+    "contact": {
+      "email": "kton1795@gmail.com",
+      "phone": "(858) 414-6184",
+      "linkedin": "https://www.linkedin.com/in/kevin-t-b757501b7/",
+      "github": "https://github.com/KevinTon0"
+    },
+    "education": [
+      {
+        "degree": "Bachelor of Science in Computer Science",
+        "school": "San Diego State University",
+        "year": "2022"
+      }
+    ],
+    "skills": [
+      "JavaScript",
+      "React",
+      "Node.js",
+      "Python",
+      "C++",
+      "Git Version Control"
+    ]
+}

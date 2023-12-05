@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
+import Resume from './Resume';
 
 const App = () => {
   const [data, setData] = useState([]);
@@ -23,7 +24,6 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1>Data Visualization Dashboard2</h1>
       <ul>
         {data.map(item => (
           <li key={item.id}>
@@ -31,8 +31,7 @@ const App = () => {
           </li>
         ))}
       </ul>
-      {/* Add your text box here */}
-      <input type="text" placeholder="Type something..." />
+      <Resume />
     </div>
   );
 };
