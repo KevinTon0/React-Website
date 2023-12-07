@@ -14,8 +14,9 @@ const Resume = () => {
         <h3>Contact Information</h3>
         <p>Email: {contact.email}</p>
         <p>Phone: {contact.phone}</p>
-        <p>LinkedIn: {contact.linkedin}</p>
-        <p>GitHub: {contact.github}</p>
+        {/* Make LinkedIn and GitHub links clickable */}
+        <p>LinkedIn: <a href={contact.linkedin} target="_blank" rel="noopener noreferrer">{contact.linkedin}</a></p>
+        <p>GitHub: <a href={contact.github} target="_blank" rel="noopener noreferrer">{contact.github}</a></p>
       </div>
 
       <div>
